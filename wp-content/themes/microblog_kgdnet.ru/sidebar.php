@@ -6,11 +6,15 @@
             <section id="category">
                 <div class="title__category">Категории блога:</div>
                 <ul class="items__category">
-                    <li class="item__category">&gt; [ <a href="#" class="link">HTML</a> ]</li>
-                    <li class="item__category">&gt; [ <a href="#" class="link">CSS</a>CSS ]</li>
-                    <li class="item__category">&gt; [ <a href="#" class="link">JS</a> ]</li>
-                    <li class="item__category">&gt; [ <a href="#" class="link">PHP</a> ]</li>
-                    <li class="item__category">&gt; [ <a href="#" class="link">MySQL</a> ]</li>
+                    <?php
+                        $categories = get_categories();
+
+                        foreach ($categories as $category):
+                            ?>
+                            <li class="item__category">&gt; [ <a href="/<?php echo $category->slug; ?>" class="link"><?php echo $category->name; ?></a> ]</li>
+                            <?php
+                        endforeach;
+                    ?>
                 </ul>
             </section>
         </div>
