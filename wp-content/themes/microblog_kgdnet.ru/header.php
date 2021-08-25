@@ -13,10 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <script defer src="js/script.bundle.js"></script>
+    <?php wp_head(); ?>
     <link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet">
     <?php wp_enqueue_style('style', get_stylesheet_uri()); ?>
 </head>
 <body>
+<?php wp_body_open(); ?>
 
 <div class="wrapper">
     <div class="container wrapper-grey wrapper-margin">
