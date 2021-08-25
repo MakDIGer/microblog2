@@ -82,3 +82,9 @@
                 </div>
             </div>
         </nav>
+        <div class="container" id="main-content">
+            <div class="row">
+                <div class="col-xl-8 col-lg-12">
+                    <div id="posts">
+                        <div class="container m-0 p-0">
+                            <div class="row">
