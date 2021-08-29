@@ -40,47 +40,32 @@
                     </svg>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <?php
-                        wp_nav_menu( [
-                            'theme_location'  => '',
-                            'menu'            => 'main',
-                            'container'       => '',
-                            'container_class' => '',
-                            'container_id'    => '',
-                            'menu_class'      => 'navbar-nav me-auto mb-2 mb-lg-0',
-                            'menu_id'         => '',
-                            'echo'            => true,
-                            'fallback_cb'     => '',
-                            'before'          => '',
-                            'after'           => '',
-                            'link_before'     => '',
-                            'link_after'      => '',
-                            'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                            'depth'           => 0,
-                            'walker'          => '',
-                        ] );
-                    ?>
-<!--                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
-<!--                        <li class="nav-item">-->
-<!--                            <a class="nav-link" aria-current="page" href="#">[ Главная ]</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item dropdown">-->
-<!--                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
-<!--                                [ Категории ]-->
-<!--                            </a>-->
-<!--                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--                                <li><a class="dropdown-item" href="#">[ Linux ]</a></li>-->
-<!--                                <li><a class="dropdown-item" href="#">[ Windows ]</a></li>-->
-<!--                                <li><a class="dropdown-item" href="#">[ Mac ]</a></li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item">-->
-<!--                            <a class="nav-link" href="#">[ О проекте ]</a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item">-->
-<!--                            <a class="nav-link" href="#">[ Обратная связь ]</a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">[ Главная ]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                [ Категории ]
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <?php
+                                    $categories = get_categories();
+                                    foreach ($categories as $category):
+                                        ?>
+                                            <li><a class="dropdown-item" href="/<?php echo $category->slug; ?>">[ <?php echo $category->name; ?> ]</a></li>
+                                        <?php
+                                    endforeach;
+                                ?>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">[ О проекте ]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">[ Обратная связь ]</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
