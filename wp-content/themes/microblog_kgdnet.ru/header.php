@@ -53,7 +53,7 @@
                                     $categories = get_categories();
                                     foreach ($categories as $category):
                                         ?>
-                                            <li><a class="dropdown-item" href="/<?php echo $category->slug; ?>">[ <?php echo $category->name; ?> ]</a></li>
+                                            <li><a class="dropdown-item" href="/category/<?php echo $category->slug; ?>">[ <?php echo $category->name; ?> ]</a></li>
                                         <?php
                                     endforeach;
                                 ?>
