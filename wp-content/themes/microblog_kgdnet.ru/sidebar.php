@@ -11,7 +11,7 @@
 
                         foreach ($categories as $category):
                             ?>
-                            <li class="item__category">&gt; [ <a href="/<?php echo $category->slug; ?>" class="link"><?php echo $category->name; ?></a> ]</li>
+                            <li class="item__category">&gt; [ <a href="/category/<?php echo $category->slug; ?>" class="link"><?php echo $category->name; ?></a> ]</li>
                             <?php
                         endforeach;
                     ?>
