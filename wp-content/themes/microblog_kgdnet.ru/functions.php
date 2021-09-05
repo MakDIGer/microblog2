@@ -85,3 +85,10 @@ function get_the_bootstrap_pagination()
 
     return $navigation;
 }
+
+function addClasses2Tags($content)
+{
+    $content = str_replace('<a', '<a class="link"', $content);
+    return $content;
+}
+add_filter('the_tags', 'addClasses2Tags', 10, 1);

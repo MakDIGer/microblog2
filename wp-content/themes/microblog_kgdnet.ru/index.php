@@ -10,8 +10,9 @@ while (have_posts()):
                                     <p class="text__post">
                                         <?php echo the_excerpt();  ?>
                                     </p>
-                                    <p class="tags__post">{ Теги: {{ <a href="#" class="link">HTML</a> }}, {{ <a
-                                            href="#" class="link">PHP</a> }}, {{ <a href="#" class="link">Bootstrap</a> }} }</p>
+                                    <p class="tags__post">
+                                        <?php the_tags('{ Тэги: {{ ', ' }}, {{ ', ' }} }'); ?>
+                                    </p>
                                 </section>
 <?php
 endwhile;
