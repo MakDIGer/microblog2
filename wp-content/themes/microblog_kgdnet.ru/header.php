@@ -26,7 +26,7 @@
             <div class="container m-auto p-0">
                 <div class="row">
                     <hgroup class="main-header__title-group">
-                        <h1 class="title-group__main-title"><a class="title-link" href="#">{ Микроблог }</a></h1>
+                        <h1 class="title-group__main-title"><a class="title-link" href="/">{ Микроблог }</a></h1>
                         <h2 class="title-group__sub-title">{{ Просто еще один блог! }}</h2>
                     </hgroup>
                 </div>
