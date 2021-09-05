@@ -63,7 +63,7 @@
                             <a class="nav-link" href="/о-проекте">[ О проекте ]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">[ Обратная связь ]</a>
+                            <a class="nav-link" href="/обратная-связь">[ Обратная связь ]</a>
                         </li>
                     </ul>
                 </div>
