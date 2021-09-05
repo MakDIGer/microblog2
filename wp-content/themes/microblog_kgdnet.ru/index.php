@@ -8,7 +8,14 @@ while (have_posts()):
                                     <h4 class="subtitle__post">{ Категория: <a href="/category/<?php echo get_the_category($post->id)[0]->slug; ?>" class="link"><?php echo get_the_category($post->id)[0]->name; ?></a>, Дата публикации:
                                         <a href="#" class="link"><time datetime="<?php echo date('Y-m-d', strtotime($post->post_date)); ?>"><?php echo date('Y.m.d', strtotime($post->post_date)); ?></time></a> }</h4>
                                     <p class="text__post">
-                                        <?php echo the_excerpt();  ?>
+                                        <?php
+                                            if (is_single($post->slug))
+                                            {
+                                                the_content();
+                                            } else {
+                                                echo the_excerpt();
+                                            }
+                                        ?>
                                     </p>
                                     <p class="tags__post">
                                         <?php the_tags('{ Тэги: {{ ', ' }}, {{ ', ' }} }'); ?>
